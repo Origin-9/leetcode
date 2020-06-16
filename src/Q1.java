@@ -2,7 +2,7 @@
  * @author : Ori
  * @date : 2019/12/5
  */
-public class QuestionOne {
+public class Q1 {
     class Solution {
         public int[] twoSum(int[] nums, int target) {
             for(int i = 0;i < nums.length;i++){
@@ -11,7 +11,7 @@ public class QuestionOne {
                         return new int[]{i,j};
                 }
             }
-            throw new IllegalArgumentException("No two sum solution");
+            throw new IllegalArgumentException('No two sum solution');
         }
     }
 }
