@@ -19,7 +19,7 @@ class Solution {
                     return false;
                 if(c == ']' && topChar != '[')
                     return false;
-                if(c == '(' && topChar != ')')
+                if(c == ')' && topChar != '(')
                     return false;
             }
         }
