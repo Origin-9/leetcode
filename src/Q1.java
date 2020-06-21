@@ -11,7 +11,7 @@ public class Q1 {
                         return new int[]{i,j};
                 }
             }
-            throw new IllegalArgumentException('No two sum solution');
+            throw new IllegalArgumentException("No two sum solution");
         }
     }
 }
