@@ -3,7 +3,6 @@ public class Q75 {
         public void sortColors(int[] nums) {
             int l = -1;
             int r = nums.length ;
-
             int cur = 0;
             while(cur < r){
                 if(nums[cur] < 1){
