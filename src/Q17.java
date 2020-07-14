@@ -20,6 +20,7 @@ public class Q17 {
             for(char c : getChars(digits.charAt(0))) {
                 sb.append(c);
                 combination(res, digits.substring(1, digits.length()), sb);
+                sb.deleteCharAt(sb.length()-1);
             }
         }
 
