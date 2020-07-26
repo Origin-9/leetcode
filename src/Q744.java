@@ -9,7 +9,7 @@ public class Q744 {
                 else
                     r = mid - 1;
             }
-            return l < letters.length ? letters[0] : letters[l];
+            return l < letters.length ? letters[l] : letters[0];
         }
     }
 
