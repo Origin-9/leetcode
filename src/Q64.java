@@ -23,7 +23,7 @@ public class Q64 {
 
     class Solution {
         public int minPathSum(int[][] grid) {
-            int[][] dp = new int[grid.length - 1][grid[0].length - 1];
+            int[][] dp = new int[grid.length][grid[0].length];
             dp[0][0] = grid[0][0];
             dp[grid.length - 1][grid[0].length - 1] = grid[grid.length - 1][grid[0].length - 1];
             for(int i = grid.length - 2; i >= 0; i--){
@@ -34,10 +34,9 @@ public class Q64 {
             }
             for(int i = grid.length - 2; i >= 0; i--){
                 for(int j = grid[0].length - 2; j >= 0; j--){
-                    dp[i][j] = Math.min(dp[i+1][j], dp[i][j+1]);
+                    dp[i][j] = Math.min(dp[i+1][j], dp[i][j+1]) + grid[i][j];
                 }
             }
-            System.out.println(dp.toString());
             return dp[0][0];
         }
     }
