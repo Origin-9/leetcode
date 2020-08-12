@@ -22,7 +22,7 @@ public class Q413 {
         }
     }
     // 递归实现，来求在区间 (k,i) 中等差数列的个数
-    class Solution1 {
+    static class Solution1 {
         int sum = 0;
         public int numberOfArithmeticSlices(int[] A) {
             slices(A, A.length - 1);
@@ -60,5 +60,9 @@ public class Q413 {
             }
             return total;
         }
+    }
+
+    public static void main(String[] args) {
+        new Solution1().numberOfArithmeticSlices(new int[]{1, 2, 3, 4});
     }
 }
