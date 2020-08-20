@@ -19,5 +19,14 @@ public class Q647 {
             }
             return res;
         }
+
+
     }
+
+    public static void main(String[] args) {
+        Integer a1 = 128;
+        Integer a2 = 128;
+        System.out.println(a1==a2);
+    }
+
 }
