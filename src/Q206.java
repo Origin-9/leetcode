@@ -1,11 +1,10 @@
 public class Q206 {
-    public class ListNode {
+    class ListNode {
         int val;
         ListNode next;
         ListNode(int x) { val = x; }
 
     }
-
 
     class Solution {
         public ListNode reverseList(ListNode head) {

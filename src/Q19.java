@@ -33,19 +33,21 @@ public class Q19 {
         public ListNode removeNthFromEnd(ListNode head, int n) {
             ListNode dummyNode = new ListNode(0);
             dummyNode.next = head;
-            ListNode first = dummyNode, sec = dummyNode;
-            int tmp = -1;
-            while(first!=null){
-                if(tmp == n){
-                    first = first.next;
-                    sec = sec.next;
-                    continue;
-                }
-                first = first.next;
-                tmp++;
+            ListNode fast = dummyNode, slow = dummyNode;
+
+            for (int i = 1; i <= n+1; i++){
+                fast = fast.next;
             }
-            sec.next = sec.next.next;
-            return dummyNode.next;
+            //删第一个节点
+            if(fast == null)
+                return head.next;
+            while (fast!= null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+            if(slow.next != null)
+                slow.next = slow.next.next;
+            return head;
         }
     }
     class ListNode {
