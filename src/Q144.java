@@ -4,6 +4,8 @@ import java.util.Stack;
 
 public class Q144 {
     class Solution {
+        //二叉树先序的非递归方式
+        //|-- 借助栈,先压右，再压左
         public List<Integer> preorderTraversal(TreeNode root) {
             if(root == null){
                 return new ArrayList<>();

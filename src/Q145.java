@@ -4,6 +4,8 @@ import java.util.Stack;
 
 public class Q145 {
     class Solution {
+        //	|--两个栈
+        //中右左--->左右中
         public List<Integer> postorderTraversal(TreeNode root) {
             if(root == null){
                 return new ArrayList<>();
