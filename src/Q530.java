@@ -1,25 +1,26 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Q653 {
+public class Q530 {
     class Solution {
-        public boolean findTarget(TreeNode root, int k) {
+        public int getMinimumDifference(TreeNode root) {
             if (root == null)
-                return false;
+                return 0;
             List<Integer> list = new ArrayList<>();
             inOrder(root, list);
-            int i = 0, j = list.size() - 1;
-            while (i < j){
-                int sum = list.get(i) + list.get(j);
-                if (sum == k)
-                    return true;
-                else if (sum > k)
-                    j--;
-                else
-                    i++;
+            if (list.size() == 1)
+                return 0;
+            int i = 0, j = 1;
+            int ret = Integer.MAX_VALUE;
+            while (j < list.size()){
+                int tmp = Math.abs(list.get(j) - list.get(i));
+                ret = ret > tmp ? tmp : ret;
+                i++;
+                j++;
             }
-            return false;
+            return ret;
         }
+
         private void inOrder(TreeNode root, List<Integer> list){
             if (root == null)
                 return;
