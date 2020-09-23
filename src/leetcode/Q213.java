@@ -5,8 +5,9 @@ public class Q213 {
         public int rob(int[] nums) {
             if(nums.length == 0)
                 return 0;
-
+            //从index = 0 开始偷（最后一个屋子不会被偷）
             int[] dp1 = new int[nums.length];
+            //从index = 1 开始偷
             int[] dp2 = new int[nums.length];
             dp1[0] = 0;
             dp1[1] = nums[0];

@@ -35,7 +35,7 @@ public class Q51 {
 
             for(int i = 0; i < n; i++){
                 int diagonals45Inx = depth + i;
-                int diagonals135Inx = n-1-(i-depth);
+                int diagonals135Inx = n-(i-depth)-1;
                 if (colUsed[i] || diagonals45Used[diagonals45Inx] || diagonals135Used[diagonals135Inx])
                     continue;
                 colUsed[i]= diagonals45Used[diagonals45Inx] = diagonals135Used[diagonals135Inx] = true;

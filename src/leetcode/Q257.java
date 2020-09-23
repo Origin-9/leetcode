@@ -10,6 +10,7 @@ public class Q257 {
         public List<String> binaryTreePaths(TreeNode root) {
             if(root == null)
                 return new ArrayList<>();
+
             List<String> res = new ArrayList<>();
             List<Integer> path = new ArrayList<>();
             Stack<TreeNode> stack = new Stack<>();
@@ -35,6 +36,7 @@ public class Q257 {
                     path.add(tmp.right.val);
                     continue;
                 }
+                //走到叶子节点
                 if(tmp.left == null && tmp.right == null){
                     for (int i = 0; i < path.size(); i++) {
                         sb.append(path.get(i));
@@ -42,14 +44,12 @@ public class Q257 {
                             sb.append("->");
                         }
                     }
-
                     res.add(sb.toString());
                     sb = new StringBuilder();
                 }
                 path.remove(path.size()-1);
             }
             return res;
-
         }
     }
 

@@ -8,8 +8,8 @@ public class Q376{
             if (nums.length < 2)
                 return nums.length;
             int[] up = new int[nums.length];
-            Arrays.fill(up, 1);
             int[] down = new int[nums.length];
+            Arrays.fill(up, 1);
             Arrays.fill(down, 1);
             for (int i = 1; i < nums.length; i++) {
                 for(int j = 0; j < i; j++) {
